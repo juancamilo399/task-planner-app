@@ -12,9 +12,6 @@ import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
 export const DrawerComponet = ({drawer,toggleDrawerf}) => {
 
-
-    
-
     const useStyles = makeStyles({
         list: {
           width: 250,
@@ -27,8 +24,12 @@ export const DrawerComponet = ({drawer,toggleDrawerf}) => {
       
     const classes = useStyles();
 
-    const handleClick = () =>{
-      console.log("olaaa")
+    const handleLogout = (e) =>{
+      console.log("olaaa");
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('Username');
+      localStorage.removeItem('Password');
+      window.location.href = "/";
     }
 
     const list = (anchor) => (
@@ -43,7 +44,7 @@ export const DrawerComponet = ({drawer,toggleDrawerf}) => {
           
           <List>
             
-            <ListItem onClick={handleClick} button key={'profile'}>
+            <ListItem  button key={'profile'}>
               <ListItemIcon ><AccountBoxIcon /> </ListItemIcon>
               <ListItemText primary={'profile'} />
             </ListItem>
@@ -52,7 +53,7 @@ export const DrawerComponet = ({drawer,toggleDrawerf}) => {
           <Divider />
           <List>
             
-              <ListItem button key={'logout'}>
+              <ListItem onClick={handleLogout} button key={'logout'}>
                 <ListItemIcon><ExitToAppIcon /> </ListItemIcon>
                 <ListItemText primary={'logout'} />
               </ListItem>

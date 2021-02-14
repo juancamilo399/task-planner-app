@@ -6,9 +6,9 @@ export const TodoList = ({todoList}) => {
 
     return (
         <>
-
-            {todoList.map((todo,i)=>(
-                <CardItem key={i} text={todo.text} priority={todo.priority} dueDate={todo.dueDate}/>
+            {todoList.map(({description,responsible,status,dueDate},i)=>(
+                <CardItem key={i} description={description}
+                 responsible={responsible} status={status} dueDate={dueDate} />
             ))}
 
         </>

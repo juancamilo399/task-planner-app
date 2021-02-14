@@ -4,7 +4,7 @@ import CardContent from '@material-ui/core/CardContent';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
-export const CardItem = ({text,priority,dueDate}) => {
+export const CardItem = ({description,responsible,status,dueDate}) => {
     
 
     const useStyles = makeStyles({
@@ -26,20 +26,20 @@ export const CardItem = ({text,priority,dueDate}) => {
                 <CardContent>
                     
                     <Typography variant="h5" component="h2">
-                        {text}
+                        {description}
                     </Typography>
+
                     <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    {priority}
+                    {`${status} - ${dueDate.format('DD-MM-YYYY')}`}
                     </Typography>
-                    
+
                     <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    {dueDate}
+                    {responsible.name}
                     </Typography>
+            
                 </CardContent>
                 
             </Card>
-        </div>
-
-        
+        </div>      
     )
 }

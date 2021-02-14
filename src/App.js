@@ -13,7 +13,7 @@ function App() {
   let isLogged = localStorage.getItem("isLoggedIn");
 
 
-  isLogged = (isLogged === "false" ? false : true)
+  isLogged = (isLogged === "true" ? true : false)
 
   const [isLoggedIn, setisLoggedIn] = useState(isLogged)
 

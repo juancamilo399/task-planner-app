@@ -3,10 +3,37 @@ import './App.css';
 import { TodoList } from './TodoList';
 import { DrawerComponet } from './DrawerComponet';
 import Button from '@material-ui/core/Button';
+import moment from 'moment';
 
 export const TodoApp = () => {
 
-    const list = [{ text: "hola", priority: "hola", dueDate: "holi" }, { text: "hola", priority: "hola", dueDate: "holi" }, { text: "hola", priority: "hola", dueDate: "holi" }]
+    const list = [{
+        "description": "some description text ",
+        "responsible": {
+            "name": "Santiago Carrillo",
+            "email": "sancarbar@gmail"
+        },
+        "status": "ready",
+        "dueDate": moment(),
+    },
+    {
+        "description": "some description text ",
+        "responsible": {
+            "name": "Santiago Carrillo",
+            "email": "sancarbar@gmail"
+        },
+        "status": "ready",
+        "dueDate": moment(),
+    },
+    {
+        "description": "some description text ",
+        "responsible": {
+            "name": "Santiago Carrillo",
+            "email": "sancarbar@gmail"
+        },
+        "status": "ready",
+        "dueDate": moment(),
+    }]
 
     const [drawer, setdrawer] = useState({
         left: false

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import logo from './components/logo.svg';
 import './components/App.css';
 import { Login } from './components/Login';
 import Swal from 'sweetalert2'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-
+import { TodoApp } from './components/TodoApp';
 
 function App() {
   localStorage.setItem("Username", "juan@gmail.com");
@@ -13,10 +12,10 @@ function App() {
 
   let isLogged = localStorage.getItem("isLoggedIn");
 
-  isLogged = (isLogged === "true" ? true : false)
+
+  isLogged = (isLogged === "false" ? false : true)
 
   const [isLoggedIn, setisLoggedIn] = useState(isLogged)
-
 
   const handleSuccessfullyLogin = (e) => {
     Swal.fire({
@@ -48,27 +47,22 @@ function App() {
     <Login successful={handleSuccessfullyLogin} failed={handleFailedLogin} />
   );
 
-  
+  const TodoAppView = () => (
+    <TodoApp />
+  );
 
-
-  
+  const correct = isLoggedIn ? TodoAppView : LoginView
 
   return (
     <div>
 
       <Router>
         <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">TODO React App</h1>
-          </header>
-
-          <br />
-          <br />
-
+      
           <div>
 
-            <Route path="/" component={LoginView} />
+            <Route path="/" component={correct} />
+            <Route path="/todo" component={correct} />
 
           </div>
         </div>

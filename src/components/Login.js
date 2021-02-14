@@ -38,10 +38,15 @@ export const Login = ({successful,failed}) => {
 
     return (
         <div>
+            <header className="App-header">
+                <h1 className="App-title">Task Planner</h1>    
+            </header>
+
 
                 <React.Fragment>
                 <CssBaseline />
                 <main className="layout">
+                
                     <Paper className="paper">
                         <Avatar className="avatar">
                             <LockIcon />

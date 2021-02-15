@@ -25,7 +25,6 @@ export const DrawerComponet = ({drawer,toggleDrawerf}) => {
     const classes = useStyles();
 
     const handleLogout = (e) =>{
-      console.log("olaaa");
       localStorage.removeItem('isLoggedIn');
       localStorage.removeItem('Username');
       localStorage.removeItem('Password');

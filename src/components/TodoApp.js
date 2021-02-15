@@ -19,8 +19,8 @@ export const TodoApp = () => {
     {
         "description": "some description text ",
         "responsible": {
-            "name": "Santiago Carrillo",
-            "email": "sancarbar@gmail"
+            "name": "Juan Angel",
+            "email": "juan@gmail"
         },
         "status": "ready",
         "dueDate": moment(),
@@ -28,8 +28,8 @@ export const TodoApp = () => {
     {
         "description": "some description text ",
         "responsible": {
-            "name": "Santiago Carrillo",
-            "email": "sancarbar@gmail"
+            "name": "Carlos Perez",
+            "email": "carlos@gmail"
         },
         "status": "ready",
         "dueDate": moment(),

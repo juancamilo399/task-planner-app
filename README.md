@@ -1,3 +1,38 @@
+# Task Planner App
+
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://task-planner-lab3.herokuapp.com/)
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://task-plannerieti.azurewebsites.net/)
+
+
+# Uso
+
+1.  Clonar el repositorio.
+
+2.  Usar el comando `npm install` para instalar las dependencias, al final se verá un resultado así.
+
+3.  Usar el comando `npm start` para ejecutar la aplicación, por defecto se abrirá en la dirección `http://localhost:3000/` y verás lo siguiente en la consola.
+
+    
+4.  Para ingresar a la aplicacion es necesario autenticarse. Las credenciales de acceso son:
+
+        Email = juan@gmail.com
+
+        Password = pass
+        
+       
+    Login.
+    
+    ![](img/login.png)
+    
+    Ya autenticado.
+    
+    ![](img/login1.png)
+    
+    Y haciendo click en la opción de menú verás la opcion de logout:
+    
+    ![](img/logout.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
